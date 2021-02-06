@@ -11,3 +11,4 @@ from os.path import isfile,join
 monrep = "d:\dl"
 fichiers = [f for f in listdir(monrep) if isfile(join(monrep,f))]
 print(fichiers)
+print("terminé")
