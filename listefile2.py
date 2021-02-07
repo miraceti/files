@@ -10,4 +10,4 @@ listefichier =[]
 for (repertoire, sousrepertoire, fichiers) in walk(monrep):
     listefichier.extend(fichiers)
     
-print(listefichier)python 
+print(listefichier)
