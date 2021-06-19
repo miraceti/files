@@ -2,7 +2,7 @@
  
 import os
 import zipfile
- 
+#fonction de compression en fichier zip d'un dossier  dirName donné
  
 # Declare the function to return all file paths of the particular directory
 def retrieve_file_paths(dirName):
