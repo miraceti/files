@@ -33,8 +33,6 @@ def maj_excel_cell(feuille,posrow,poscol,valeur):
 dir = 'd:/dl/'
 
 wb = load_workbook(filename="modele.xlsx")
-
-#activation de la feuille
 ws = wb["DATA"]
 
 list_folder =[]
