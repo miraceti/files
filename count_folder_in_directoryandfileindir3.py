@@ -6,7 +6,6 @@ import time, calendar,locale
 from time import strftime
 from datetime import datetime
 from datetime import date
-import datetime as dt
 
 #######################################################
 #  variables temporelles
@@ -45,7 +44,6 @@ def find_folders():
         if os.path.isfile(item):
             continue
         else:
-#                                  # yield folder name     
             yield item
 
 os.chdir(dir)
@@ -53,7 +51,7 @@ ligne = 2
 for folder in find_folders():
         print (folder)
         
-        list = os.listdir(folder) # dir is your directory path
+        list = os.listdir(folder)
         number_files = len(list)
         print("fichiers & dossiers: " + str(number_files))
         
@@ -72,7 +70,6 @@ for folder in find_folders():
         
         list_folder.append(folder)
         ligne +=1
-# sys.exit()  
 
 wb.save("d:/Dossiers_utilisateur_" +str(datefile1) + ".xlsx")
 
