@@ -49,36 +49,18 @@ file_count = 0
 ligne = 2
 for folder in find_folders():
         print (folder)
-        
-        list = os.listdir(folder)
-        number_files = len(list)
-        print("fichiers & dossiers: " + str(number_files))
-        
-        onlyfiles = next(os.walk(folder))[2]
-        print("fichiers uniquement : " + str(len(onlyfiles)))
-        
-        print('dossier uniquement : ' + str (number_files - len(onlyfiles) ))
-        
-        print('\n')
-        
+               
+        #on ecrit le nom du dossier
         maj_excel_cell(ws,ligne,1,str(folder))
-        # maj_excel_cell(ws,ligne,2,str(number_files))
-        # maj_excel_cell(ws,ligne,3,str(number_files - len(onlyfiles) ))
-        # maj_excel_cell(ws,ligne,4,str(len(onlyfiles)))
-        
-        
+       
         # fichiers dans tous les sous repertoires
         file_count = sum(len(files) for _, _, files in os.walk(folder))
         maj_excel_cell(ws,ligne,2,file_count)
         file_count = 0
-        
-        list_folder.append(folder)
+                
         ligne +=1
 
 wb.save("d:/temp2/Dossiers_utilisateur_" +str(datefile1) + ".xlsx")
 
-print(list_folder)
-print("TERMINE")
-
 file_count = sum(len(files) for _, _, files in os.walk(dir))
-print(file_count)
+print('\nnombre total de fichiers : ',file_count)
